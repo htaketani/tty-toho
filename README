@@ -1,18 +1,23 @@
 tty-toho
 
-Today is April fool, 
-this is just kidding. :p
+Toho Shooting Game for TTY(Un*x CUI Terminal)
 
+
+Plathome:
+ * unix-like terminal by Solaris, Linux, Cygwin, Mac OS X, ...
 
 Require:
  * python 2.4.6
    (import curses)
 
 Play:
- * on u*ix like terminal, type this 
+ * on unix-like terminal, type this 
      python tt-toho.py
-
 
 
 happy TOHO!
 thx
+
+---
+Today is April fool, 
+this is just kidding. :p
