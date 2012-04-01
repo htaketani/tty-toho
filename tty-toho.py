@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 '''
 # tty toho
-# ver 0.1
+# ver 0.1.1
 # 2012-04-01, take
 '''
 
@@ -232,7 +232,7 @@ class GameCh():
       self.x <= self.maxx and 
       self.y >= self.miny and 
       self.y <= self.maxy ):
-      self.view.addch(self.y, self.x, self.SELF_CHAR, self.SELF_ATTR)
+      self.view.addch(int(self.y), int(self.x), self.SELF_CHAR, self.SELF_ATTR)
     self.age += 1
 
   def dmessage(self, msg):
