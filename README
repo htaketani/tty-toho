@@ -7,17 +7,16 @@ Plathome:
  * unix-like terminal by Solaris, Linux, Cygwin, Mac OS X, ...
 
 Require:
- * python 2.x (3.x?)
+ * python 2.6, later (3.x?)
    (import curses)
 
 Play:
  * on unix-like terminal, type this 
-     python tt-toho.py
+     python tty_toho.py
 
 
 happy TOHO!
 thx
 
 ---
-Today is April fool, 
-this is just kidding. :p
+Today is April fool. :p
