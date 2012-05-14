@@ -33,6 +33,10 @@ class CursesWindow():
         curses.wrapper(self.loop, host)
 
     def loop(self, scr, host):
+        #----------------
+        # explicit declare to use global variables
+        #----------------
+        global KEY_QUIT, KEY_UP, KEY_DOWN, KEY_LEFT, KEY_RIGHT
 
         #----------------
         # init
