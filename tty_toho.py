@@ -28,7 +28,7 @@ KEY_LEFT = 104
 KEY_RIGHT = 108
 
 class CursesWindow():
-    def __init__(self, host=''):
+    def __init__(self, host = ''):
         locale.setlocale(locale.LC_ALL, '')
         curses.wrapper(self.loop, host)
 
@@ -93,7 +93,7 @@ class CursesWindow():
             # create
             for i in range(1, 2):
                 #enemy = Enemy(self.cmd_window, self.msg_window, 0, random.randint(0, 50))
-                enemy = EnemyStraight(self.cmd_window, self.msg_window, 0, random.randint(0, 50), slant=(random.random()-0.5))
+                enemy = EnemyStraight(self.cmd_window, self.msg_window, 0, random.randint(0, 50), slant=(random.random() - 0.5))
                 enemys.append(enemy)
 
             for i in range(1, 2):
@@ -258,11 +258,11 @@ class Marisa(GameCh):
     SELF_CHAR = '@'
     SELF_ATTR = 0
 
-    def __init__(self, view=None, msgView=None, y=0, x=0):
+    def __init__(self, view = None, msgView = None, y = 0, x = 0):
         GameCh.__init__(self, view, msgView, y, x)
         self.dmessage("init Marisa")
         
-    def move(self, input, step=0):
+    def move(self, input, step = 0):
         # default step is 1 (vi like)
         if step == 0:
             step = 1
@@ -297,7 +297,7 @@ class Enemy(GameCh):
     SELF_ATTR = 0
     SELF_SPEED = 1
 
-    def __init__(self, view=None, msgView=None, y=0, x=0, **opt):
+    def __init__(self, view = None, msgView = None, y = 0, x = 0, **opt):
         GameCh.__init__(self, view, msgView, y, x)
         self.dmessage("init Enemy")
     
@@ -319,7 +319,7 @@ class EnemyStraight(Enemy):
     SELF_ATTR = 0
     SELF_SPEED = 1
 
-    def __init__(self, view=None, msgView=None, y=0, x=0, **opt):
+    def __init__(self, view = None, msgView = None, y = 0, x = 0, **opt):
         GameCh.__init__(self, view, msgView, y, x)
         self.slant = opt["slant"]
     
@@ -340,7 +340,7 @@ class EnemyWave(Enemy):
     SELF_ATTR = 1
     SELF_SPEED = 0.8
 
-    def __init__(self, view=None, msgView=None, y=0, x=0, **opt):
+    def __init__(self, view = None, msgView = None, y = 0, x = 0, **opt):
         GameCh.__init__(self, view, msgView, y, x)
     
     def move(self):
@@ -360,7 +360,7 @@ class EnemySlow(Enemy):
     SELF_ATTR = 0
     SELF_SPEED = 0.4
 
-    def __init__(self, view=None, msgView=None, y=0, x=0, **opt):
+    def __init__(self, view = None, msgView = None, y = 0, x = 0, **opt):
         GameCh.__init__(self, view, msgView, y, x)
     
     def move(self):
