@@ -111,6 +111,7 @@ class CursesWindow():
             # Render
             #----------------
             self.cmd_window.clear()
+            global DEBUG
             if DEBUG:
                 self.dmessage("t: %d" % (t,))
             marisa.render()
@@ -122,6 +123,7 @@ class CursesWindow():
             #----------------
             # Next frame
             #----------------
+            global WAIT
             time.sleep(WAIT);
             t += 1
 
@@ -201,6 +203,7 @@ class CursesWindow():
         self.msg_window.refresh()
 
     def dmessage(self, msg):
+        global DEBUG
         if DEBUG:
             self.message("debug: " + msg, 3)
 
@@ -243,6 +246,7 @@ class GameCh():
         self.age += 1
 
     def dmessage(self, msg):
+        global DEBUG
         if DEBUG:
             self.msgView.addstr("debug: %s\n" % msg)
             self.msgView.refresh()
